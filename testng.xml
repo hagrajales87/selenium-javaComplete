@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke test">
+    <listeners>
+        <listener class-name="testNG.Listeners"/>
+    </listeners>
+    <parameter name="URL" value= "qaclickacademy.com"/>
+    <parameter name="APIKey/username" value="123456"/>
+    <test verbose="2" preserve-order="true"
+          name="/Users/hectorgrajales/Curses/Selenium/BasicTest/selenium-javaComplete">
+        <groups>
+            <run>
+                <!-- <include name="smoke"/> -->
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNG.DemoOne"/>
+            <class name="testNG.DemoTwo"/>
+            <class name="testNG.DemoThree"/>
+            <class name="testNG.DemoFour"/>
+        </classes>
+    </test>
+</suite>
